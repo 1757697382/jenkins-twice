@@ -272,7 +272,7 @@ def create():
                 jar_name = request.form.get('jar_name')
                 cmd1= request.form.get('cmd')
                 list = cmd1.split(' ')
-                cmd = "java -Xms2G -Xmx2G"
+                cmd = "java -Xms256m -Xmx256m"
                 xianzhi = "-Xms"
                 print(list)
                 for i in range(1, len(list)):
