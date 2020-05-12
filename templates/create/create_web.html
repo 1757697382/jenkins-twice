@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jenkins构建</title>
+    <link rel="stylesheet"  href="/static/css/styles.css" >
+
+</head>
+<body>
+<form class="contact_form" action="" method="post" name="contact_form" >
+    <ul>
+        <li>
+            <h2>Jenkins Job Web</h2>
+        </li>
+        <li>
+        <li>
+            <label for="git_url">git地址：</label>
+            <input type="text" name="git_url" pattern="^git@.*" title="请输入正确的git地址:git@" required>
+        </li>
+        <li>
+            <label for="contextpath">contextpath：</label>
+            <input type="text" name="contextpath"  required>
+        </li>
+        <li>
+            <button class="submit" type="reset">重置</button>
+            <button class="submit" type="submit">创建JOB</button>
+        </li>
+        <li>{{message}}</li>
+    </ul>
+</form>
+</body>
+</html>

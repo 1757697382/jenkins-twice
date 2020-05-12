@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jenkins构建</title>
+    <link rel="stylesheet"  href="/static/css/styles.css" >
+
+</head>
+<body>
+
+    <ul class="contact_form">
+        <li>
+            <h2>Jenkins Job 构建系统</h2>
+        </li>
+        <li>
+           <p> <a  href="{{url_for('get_token')}}">获取token创建job</a></p>
+            <p style="color:red">{{message}}</p>
+        </li>
+        <li>
+            <p> <a  href="{{url_for('adminlogin')}}">管理员？去登录</a></p>
+
+        </li>
+
+    </ul>
+
+</body>
+</html>

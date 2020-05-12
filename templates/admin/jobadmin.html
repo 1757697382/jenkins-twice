@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jenkins构建</title>
+    <link rel="stylesheet"  href="/static/css/styles.css" >
+
+</head>
+<body>
+<form class="contact_form" action="" method="post" name="contact_form" >
+    <ul>
+        <li>
+            <h2>JOB Manage</h2>
+        </li>
+        <li>
+            <label for="username">邮箱前缀:</label>
+            <input  type="text" name="username" pattern="[0-9A-Za-z\-]{0,20}" title="请限制在20个字数内，且不能有汉字" autofocus required>
+        </li>
+        <li>
+            <label for="job_name">job名称:</label>
+            <input  type="text" name="job_name"  pattern="[0-9A-Za-z\-]{0,100}" title="请限制在100个字数内，且不能有汉字" required>
+        </li>
+        <li>
+            <label for="sshserver">部署服务器：</label>
+             <input list="sshserver" name="sshserver" placeholder="请点此选择部署的服务器" required autocomplete="off">
+        <datalist id="sshserver">
+            <option selected="selected" value="k8s-10">
+            <option value="web-12">
+        </datalist>
+        </li>
+        <li>
+            <label for="description">描述：</label>
+            <textarea name="description" cols="40" rows="6"> </textarea>
+            <span class="form_hint">在此添加对该job的描述</span>
+        </li>
+        <li>
+            <label style="color:red" for="result">{{result}}</label>
+
+            <button class="submit" type="submit">绑定信息</button>
+        </li>
+        <li>
+            <p> <a  href="{{url_for('index')}}">返回首页</a></p>
+        </li>
+    </ul>
+</form>
+</body>
+</html>

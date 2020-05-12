@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jenkins构建</title>
+    <link rel="stylesheet"  href="/static/css/styles.css" >
+
+</head>
+<body>
+<form class="contact_form" action="" method="post" name="contact_form" >
+    <ul>
+        <li>
+            <h2>Jenkins Job</h2>
+        </li>
+        <li>
+            <label for="app_name">应用名:</label>
+            <input  type="text" name="app_name" pattern="[0-9A-Za-z\-]{0,15}" title="请限制在15个字数内，且不能有汉字"  required>
+        </li>
+        <li>
+            <label for="port">服务端口:</label>
+            <input  type="number" name="port" required>
+        </li>
+        <li>
+            <label for="jar_name">jar包名：</label>
+            <input type="text" name="jar_name" pattern=".*.jar$" title="请输入正确的jar包格式" required>
+        </li>
+        <li>
+            <label for="cmd">启动命令：</label>
+            <input type="text" name="cmd" required>
+        </li>
+        <li>
+            <label for="git_url">git地址：</label>
+            <input type="text" name="git_url"  required>
+        </li>
+        <li>
+            <label for="branch">git分支：</label>
+            <input type="text" name="branch"  required>
+        </li>
+        <li>
+            <button class="submit" type="reset">重置</button>
+            <button class="submit" type="submit">创建JOB</button>
+        </li>
+        <li>{{message}}</li>
+    </ul>
+</form>
+</body>
+</html>

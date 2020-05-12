@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>token获取</title>
+    <link rel="stylesheet"  href="/static/css/styles.css" >
+
+</head>
+<body>
+
+<form class="contact_form" action="{{ url_for('get_token') }}" method="post" name="contact_form" >
+<ul>
+        <li>
+            <h2>token获取</h2>
+        </li>
+        <li style="color:red">{{ message }}</li>
+        <li>
+            <label for="username">邮箱前缀:</label>
+            <input  type="text" name="username" required autocomplete="off">
+        </li>
+
+        {% for key in tetk %}
+        <li>
+            <label for="token">{{key}}:</label>
+            <input  type="text" name="token" value={{tetk[key]}} readonly="readonly">
+        </li>
+        {% endfor %}
+        <li>
+            <button class="submit" type="submit">获取token</button>
+        </li>
+    </ul>
+</form>
+
+<form class="contact_form" action="{{ url_for('index') }}" method="post" name="contact_form1" >
+        <ul>
+        <li>
+            <h2>job创建</h2>
+        </li>
+        <li>
+            <label for="token">token:</label>
+            <input  type="text" name="token"   required autocomplete="off">
+        </li>
+        <li>
+            <button class="submit" type="submit">填入token去创建job</button>
+        </li>
+        <li>
+             <p> <a  href="{{url_for('index')}}">返回首页</a></p>
+        </li>
+        </ul>
+</form>
+
+</body>
+</html>
