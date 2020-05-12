@@ -17,7 +17,7 @@ from jinja2 import Environment,FileSystemLoader
 
 
 #初始化
-app = Flask(__name__,template_folder='templates',instance_path="config_private/",instance_relative_config=True)
+app = Flask(__name__,template_folder='templates',instance_path="/opt/app-root/src/config_private/",instance_relative_config=True)
 app.config.from_pyfile('config_private.py')
 db_user = app.config["USER"]
 db_pass = app.config["PASS"]
